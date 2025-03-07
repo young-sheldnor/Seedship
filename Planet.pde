@@ -5,11 +5,11 @@ class Planet {
   
   //Creates the unnecesary traits on planets
   /*
-    hasMoon = planet has moon, further moon traits affected by moonRich for resources, moonDie for dying moon, and moonNorm for normal moon
-    hasStorms = solar storms, affects if probes are effective or not. Negative effect on technology stat.
-    hasPlants = determines if planet has plants. Affected by plantsGood, plantsBad, and plantsNeutral to determine end game result.
-    hasAnimals = if planet has animals. Affected by animalsGood, animalsBad, and animalsNeutral to determine end game point result.
-    hasCiv = if planet has civilization. Affectd by civDead, civTribe, civStone, civBronze, civMedieval, civIndustrial, civModern, and civSpace to determine state of the civilization.
+  * hasMoon = planet has moon, further moon traits affected by moonRich for resources, moonDie for dying moon, and moonNorm for normal moon
+  * hasStorms = solar storms, affects if probes are effective or not. Negative effect on technology stat.
+  * hasPlants = determines if planet has plants. Affected by plantsGood, plantsBad, and plantsNeutral to determine end game result.
+  * hasAnimals = if planet has animals. Affected by animalsGood, animalsBad, and animalsNeutral to determine end game point result.
+  * hasCiv = if planet has civilization. Affectd by civDead, civTribe, civStone, civBronze, civMedieval, civIndustrial, civModern, and civSpace to determine state of the civilization.
   */
   boolean hasMoon, hasStorms, hasPlants, hasAnimals, hasCiv;
   boolean moonRich, moonDie, moonNorm;
@@ -36,6 +36,9 @@ class Planet {
     gravity = int(random(100) );
     water = int(random(100) );
     temp = int(random(100) );
+    
+    //Creates planet average of essential scores to be used with score calucation
+    planetAvg = (atmosphere+resource+gravity+water+temp)/5;
     
     //Gives random values for the unnecesary traits
     if( rdmOne == 1 )
@@ -80,6 +83,29 @@ class Planet {
         animalsBad = true;
       else
         animalsNeutral = true;
+    }
+    
+    if( hasCiv == true ) {
+      int dead = int(random(1,3) );
+      if( dead == 1 )
+        civDead = true;
+      else {
+        int civState = int(random(1, 18) );
+        if( civState == 1 )
+          civSpace = true;
+        else if( civState == 2 || civState == 3 )
+          civModern = true;
+        else if( civState == 4 || civState == 5 )
+          civIndustrial = true;
+        else if( civState == 6 || civState == 7 || civState == 8 )
+          civMedieval = true;
+        else if( civState == 9 || civState == 10 || civState == 11 )
+          civBronze = true;
+        else if( civState == 12 || civState == 13 || civState == 14 )
+          civStone = true;
+        else
+          civTribe = true;
+      }
     }
   }
 }
