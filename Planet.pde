@@ -9,13 +9,16 @@ class Planet {
   * hasStorms = solar storms, affects if probes are effective or not. Negative effect on technology stat.
   * hasPlants = determines if planet has plants. Affected by plantsGood, plantsBad, and plantsNeutral to determine end game result.
   * hasAnimals = if planet has animals. Affected by animalsGood, animalsBad, and animalsNeutral to determine end game point result.
-  * hasCiv = if planet has civilization. Affectd by civDead, civTribe, civStone, civBronze, civMedieval, civIndustrial, civModern, and civSpace to determine state of the civilization.
-  */
+  * hasCiv = if planet has civilization. Affectd by civDead, civTribe, civStone, civBronze, civMedieval, civIndustrial, civModern, and civSpace to determine state of the civilization. */
+  
   boolean hasMoon, hasStorms, hasPlants, hasAnimals, hasCiv;
   boolean moonRich, moonDie, moonNorm;
   boolean plantsGood, plantsBad, plantsNeutral;
   boolean animalsGood, animalsBad, animalsNeutral;
   boolean civDead, civTribe, civStone, civBronze, civMedieval, civIndustrial, civModern, civSpace;
+  
+  //See if planet has been probed
+  boolean probed;
   
   public Planet() {
     planetSetup();
@@ -70,7 +73,7 @@ class Planet {
         plantsGood = true;
       if( plantState == 2)
         plantsBad = true;
-      else
+      else if( plantState > 2 )
         plantsNeutral = true;
     }
     
@@ -81,7 +84,7 @@ class Planet {
         animalsGood = true;
       if( animalState == 2 )
         animalsBad = true;
-      else
+      else if( animalState > 2 )
         animalsNeutral = true;
     }
     
