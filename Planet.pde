@@ -33,15 +33,47 @@ class Planet {
     rdmFour = int(random(1, 3) );
     rdmFive = int(random(1, 8) );
     
-    //Gives random values for the necesary traits
-    atmosphere = int(random(100) );
-    resource = int(random(100) );
-    gravity = int(random(100) );
-    water = int(random(100) );
-    temp = int(random(100) );
+    //Gives random values for the necesary traits if no upgrades
+    if( ship[0].upgradeAtmosphere == 0 )
+      atmosphere = int(random(100) );
+    if( ship[0].upgradeResource == 0 )
+      resource = int(random(100) );
+    if( ship[0].upgradeGravity == 0 )
+      gravity = int(random(100) );
+    if( ship[0].upgradeWater == 0 )
+      water = int(random(100) );
+    if( ship[0].upgradeTemp == 0 )
+      temp = int(random(100) );
+      
+    //Gives random values for the necesary traits if 1 upgrade
+    if( ship[0].upgradeAtmosphere == 1 )
+      atmosphere = int(max(random(100), random(100) ) );
+    if( ship[0].upgradeResource == 1 )
+      resource = int(max(random(100), random(100) ) );
+    if( ship[0].upgradeGravity == 1 )
+      gravity = int(max(random(100), random(100) ) );
+    if( ship[0].upgradeWater == 1 )
+      water = int(max(random(100), random(100) ) );
+    if( ship[0].upgradeTemp == 1 )
+      temp = int(max(random(100), random(100) ) );
+      
+    //Gives random values for the necesary traits if max (2) upgrades
+    if( ship[0].upgradeAtmosphere == 2 )
+      atmosphere = int(max( random(100), max(random(100), random(100) ) ) );
+    if( ship[0].upgradeResource == 2 )
+      resource = int(max( random(100), max(random(100), random(100) ) ) );
+    if( ship[0].upgradeGravity == 2 )
+      gravity = int(max( random(100), max(random(100), random(100) ) ) );
+    if( ship[0].upgradeWater == 2 )
+      water = int(max( random(100), max(random(100), random(100) ) ) );
+    if( ship[0].upgradeTemp == 2 )
+      temp = int(max( random(100), max(random(100), random(100) ) ) );
     
     //Creates planet average of essential scores to be used with score calucation
     planetAvg = (atmosphere+resource+gravity+water+temp)/5;
+    
+    //Adds one to the running tally of what planets have been explored
+    journeyLength ++;
     
     //Gives random values for the unnecesary traits
     if( rdmOne == 1 )

@@ -1,0 +1,162 @@
+1,Keep the ship on track to hit the construction system. \n \n Steer the ship to make impact with the construction system system instead.
+2,Keep the ship on track to hit the construction system. \n \n Steer the ship to make impact with the science databanks system instead.
+3,Keep the ship on track to hit the construction system. \n \n Steer the ship to make impact with the culture databanks system instead.
+4,Keep the ship on track to hit the construction system. \n \n Steer the ship to make impact with the atmospheric scanners system instead.
+5,Keep the ship on track to hit the construction system. \n \n Steer the ship to make impact with the gravity scanners system instead.
+6,Keep the ship on track to hit the construction system. \n \n Steer the ship to make impact with the temperature scanners system instead.
+7,Keep the ship on track to hit the construction system. \n \n Steer the ship to make impact with the water scanners system instead.
+8,Keep the ship on track to hit the construction system. \n \n Steer the ship to make impact with the resource scanners system instead.
+9,Keep the ship on track to hit the construction system. \n \n Steer the ship to make impact with the life support systems system instead.
+10,Keep the ship on track to hit the science databanks. \n \n Steer the ship to make impact with the construction system system instead.
+11,Keep the ship on track to hit the science databanks. \n \n Steer the ship to make impact with the science databanks system instead.
+12,Keep the ship on track to hit the science databanks. \n \n Steer the ship to make impact with the culture databanks system instead.
+13,Keep the ship on track to hit the science databanks. \n \n Steer the ship to make impact with the atmospheric scanners system instead.
+14,Keep the ship on track to hit the science databanks. \n \n Steer the ship to make impact with the gravity scanners system instead.
+15,Keep the ship on track to hit the science databanks. \n \n Steer the ship to make impact with the temperature scanners system instead.
+16,Keep the ship on track to hit the science databanks. \n \n Steer the ship to make impact with the water scanners system instead.
+17,Keep the ship on track to hit the science databanks. \n \n Steer the ship to make impact with the resource scanners system instead.
+18,Keep the ship on track to hit the science databanks. \n \n Steer the ship to make impact with the life support systems system instead.
+19,Keep the ship on track to hit the culture databanks. \n \n Steer the ship to make impact with the construction system system instead.
+20,Keep the ship on track to hit the culture databanks. \n \n Steer the ship to make impact with the science databanks system instead.
+21,Keep the ship on track to hit the culture databanks. \n \n Steer the ship to make impact with the culture databanks system instead.
+22,Keep the ship on track to hit the culture databanks. \n \n Steer the ship to make impact with the atmospheric scanners system instead.
+23,Keep the ship on track to hit the culture databanks. \n \n Steer the ship to make impact with the gravity scanners system instead.
+24,Keep the ship on track to hit the culture databanks. \n \n Steer the ship to make impact with the temperature scanners system instead.
+25,Keep the ship on track to hit the culture databanks. \n \n Steer the ship to make impact with the water scanners system instead.
+26,Keep the ship on track to hit the culture databanks. \n \n Steer the ship to make impact with the resource scanners system instead.
+27,Keep the ship on track to hit the culture databanks. \n \n Steer the ship to make impact with the life support systems system instead.
+28,Keep the ship on track to hit the atmospheric scanners. \n \n Steer the ship to make impact with the construction system system instead.
+29,Keep the ship on track to hit the atmospheric scanners. \n \n Steer the ship to make impact with the science databanks system instead.
+30,Keep the ship on track to hit the atmospheric scanners. \n \n Steer the ship to make impact with the culture databanks system instead.
+31,Keep the ship on track to hit the atmospheric scanners. \n \n Steer the ship to make impact with the atmospheric scanners system instead.
+32,Keep the ship on track to hit the atmospheric scanners. \n \n Steer the ship to make impact with the gravity scanners system instead.
+33,Keep the ship on track to hit the atmospheric scanners. \n \n Steer the ship to make impact with the temperature scanners system instead.
+34,Keep the ship on track to hit the atmospheric scanners. \n \n Steer the ship to make impact with the water scanners system instead.
+35,Keep the ship on track to hit the atmospheric scanners. \n \n Steer the ship to make impact with the resource scanners system instead.
+36,Keep the ship on track to hit the atmospheric scanners. \n \n Steer the ship to make impact with the life support systems system instead.
+37,Keep the ship on track to hit the gravity scanners. \n \n Steer the ship to make impact with the construction system system instead.
+38,Keep the ship on track to hit the gravity scanners. \n \n Steer the ship to make impact with the science databanks system instead.
+39,Keep the ship on track to hit the gravity scanners. \n \n Steer the ship to make impact with the culture databanks system instead.
+40,Keep the ship on track to hit the gravity scanners. \n \n Steer the ship to make impact with the atmospheric scanners system instead.
+41,Keep the ship on track to hit the gravity scanners. \n \n Steer the ship to make impact with the gravity scanners system instead.
+42,Keep the ship on track to hit the gravity scanners. \n \n Steer the ship to make impact with the temperature scanners system instead.
+43,Keep the ship on track to hit the gravity scanners. \n \n Steer the ship to make impact with the water scanners system instead.
+44,Keep the ship on track to hit the gravity scanners. \n \n Steer the ship to make impact with the resource scanners system instead.
+45,Keep the ship on track to hit the gravity scanners. \n \n Steer the ship to make impact with the life support systems system instead.
+46,Keep the ship on track to hit the temperature scanners. \n \n Steer the ship to make impact with the construction system system instead.
+47,Keep the ship on track to hit the temperature scanners. \n \n Steer the ship to make impact with the science databanks system instead.
+48,Keep the ship on track to hit the temperature scanners. \n \n Steer the ship to make impact with the culture databanks system instead.
+49,Keep the ship on track to hit the temperature scanners. \n \n Steer the ship to make impact with the atmospheric scanners system instead.
+50,Keep the ship on track to hit the temperature scanners. \n \n Steer the ship to make impact with the gravity scanners system instead.
+51,Keep the ship on track to hit the temperature scanners. \n \n Steer the ship to make impact with the temperature scanners system instead.
+52,Keep the ship on track to hit the temperature scanners. \n \n Steer the ship to make impact with the water scanners system instead.
+53,Keep the ship on track to hit the temperature scanners. \n \n Steer the ship to make impact with the resource scanners system instead.
+54,Keep the ship on track to hit the temperature scanners. \n \n Steer the ship to make impact with the life support systems system instead.
+55,Keep the ship on track to hit the water scanners. \n \n Steer the ship to make impact with the construction system system instead.
+56,Keep the ship on track to hit the water scanners. \n \n Steer the ship to make impact with the science databanks system instead.
+57,Keep the ship on track to hit the water scanners. \n \n Steer the ship to make impact with the culture databanks system instead.
+58,Keep the ship on track to hit the water scanners. \n \n Steer the ship to make impact with the atmospheric scanners system instead.
+59,Keep the ship on track to hit the water scanners. \n \n Steer the ship to make impact with the gravity scanners system instead.
+60,Keep the ship on track to hit the water scanners. \n \n Steer the ship to make impact with the temperature scanners system instead.
+61,Keep the ship on track to hit the water scanners. \n \n Steer the ship to make impact with the water scanners system instead.
+62,Keep the ship on track to hit the water scanners. \n \n Steer the ship to make impact with the resource scanners system instead.
+63,Keep the ship on track to hit the water scanners. \n \n Steer the ship to make impact with the life support systems system instead.
+64,Keep the ship on track to hit the resource scanners. \n \n Steer the ship to make impact with the construction system system instead.
+65,Keep the ship on track to hit the resource scanners. \n \n Steer the ship to make impact with the science databanks system instead.
+66,Keep the ship on track to hit the resource scanners. \n \n Steer the ship to make impact with the culture databanks system instead.
+67,Keep the ship on track to hit the resource scanners. \n \n Steer the ship to make impact with the atmospheric scanners system instead.
+68,Keep the ship on track to hit the resource scanners. \n \n Steer the ship to make impact with the gravity scanners system instead.
+69,Keep the ship on track to hit the resource scanners. \n \n Steer the ship to make impact with the temperature scanners system instead.
+70,Keep the ship on track to hit the resource scanners. \n \n Steer the ship to make impact with the water scanners system instead.
+71,Keep the ship on track to hit the resource scanners. \n \n Steer the ship to make impact with the resource scanners system instead.
+72,Keep the ship on track to hit the resource scanners. \n \n Steer the ship to make impact with the life support systems system instead.
+73,Keep the ship on track to hit the life support systems. \n \n Steer the ship to make impact with the construction system system instead.
+74,Keep the ship on track to hit the life support systems. \n \n Steer the ship to make impact with the science databanks system instead.
+75,Keep the ship on track to hit the life support systems. \n \n Steer the ship to make impact with the culture databanks system instead.
+76,Keep the ship on track to hit the life support systems. \n \n Steer the ship to make impact with the atmospheric scanners system instead.
+77,Keep the ship on track to hit the life support systems. \n \n Steer the ship to make impact with the gravity scanners system instead.
+78,Keep the ship on track to hit the life support systems. \n \n Steer the ship to make impact with the temperature scanners system instead.
+79,Keep the ship on track to hit the life support systems. \n \n Steer the ship to make impact with the water scanners system instead.
+80,Keep the ship on track to hit the life support systems. \n \n Steer the ship to make impact with the resource scanners system instead.
+81,Keep the ship on track to hit the life support systems. \n \n Steer the ship to make impact with the life support systems system instead.
+82,Drain energy and possibly damage the construction system. \n \n Fly blind and possibly damage the construction system instead.
+83,Drain energy and possibly damage the construction system. \n \n Fly blind and possibly damage the science databanks instead.
+84,Drain energy and possibly damage the construction system. \n \n Fly blind and possibly damage the culture databanks instead.
+85,Drain energy and possibly damage the construction system. \n \n Fly blind and possibly damage the atmospheric scanners instead.
+86,Drain energy and possibly damage the construction system. \n \n Fly blind and possibly damage the gravity scanners instead.
+87,Drain energy and possibly damage the construction system. \n \n Fly blind and possibly damage the temperature scanners instead.
+88,Drain energy and possibly damage the construction system. \n \n Fly blind and possibly damage the water scanners instead.
+89,Drain energy and possibly damage the construction system. \n \n Fly blind and possibly damage the resource scanners instead.
+90,Drain energy and possibly damage the construction system. \n \n Fly blind and possibly damage the life support systems instead.
+91,Drain energy and possibly damage the science databanks. \n \n Fly blind and possibly damage the construction system instead.
+92,Drain energy and possibly damage the science databanks. \n \n Fly blind and possibly damage the science databanks instead.
+93,Drain energy and possibly damage the science databanks. \n \n Fly blind and possibly damage the culture databanks instead.
+94,Drain energy and possibly damage the science databanks. \n \n Fly blind and possibly damage the atmospheric scanners instead.
+95,Drain energy and possibly damage the science databanks. \n \n Fly blind and possibly damage the gravity scanners instead.
+96,Drain energy and possibly damage the science databanks. \n \n Fly blind and possibly damage the temperature scanners instead.
+97,Drain energy and possibly damage the science databanks. \n \n Fly blind and possibly damage the water scanners instead.
+98,Drain energy and possibly damage the science databanks. \n \n Fly blind and possibly damage the resource scanners instead.
+99,Drain energy and possibly damage the science databanks. \n \n Fly blind and possibly damage the life support systems instead.
+100,Drain energy and possibly damage the culture databanks. \n \n Fly blind and possibly damage the construction system instead.
+101,Drain energy and possibly damage the culture databanks. \n \n Fly blind and possibly damage the science databanks instead.
+102,Drain energy and possibly damage the culture databanks. \n \n Fly blind and possibly damage the culture databanks instead.
+103,Drain energy and possibly damage the culture databanks. \n \n Fly blind and possibly damage the atmospheric scanners instead.
+104,Drain energy and possibly damage the culture databanks. \n \n Fly blind and possibly damage the gravity scanners instead.
+105,Drain energy and possibly damage the culture databanks. \n \n Fly blind and possibly damage the temperature scanners instead.
+106,Drain energy and possibly damage the culture databanks. \n \n Fly blind and possibly damage the water scanners instead.
+107,Drain energy and possibly damage the culture databanks. \n \n Fly blind and possibly damage the resource scanners instead.
+108,Drain energy and possibly damage the culture databanks. \n \n Fly blind and possibly damage the life support systems instead.
+109,Drain energy and possibly damage the atmospheric scanners. \n \n Fly blind and possibly damage the construction system instead.
+110,Drain energy and possibly damage the atmospheric scanners. \n \n Fly blind and possibly damage the science databanks instead.
+111,Drain energy and possibly damage the atmospheric scanners. \n \n Fly blind and possibly damage the culture databanks instead.
+112,Drain energy and possibly damage the atmospheric scanners. \n \n Fly blind and possibly damage the atmospheric scanners instead.
+113,Drain energy and possibly damage the atmospheric scanners. \n \n Fly blind and possibly damage the gravity scanners instead.
+114,Drain energy and possibly damage the atmospheric scanners. \n \n Fly blind and possibly damage the temperature scanners instead.
+115,Drain energy and possibly damage the atmospheric scanners. \n \n Fly blind and possibly damage the water scanners instead.
+116,Drain energy and possibly damage the atmospheric scanners. \n \n Fly blind and possibly damage the resource scanners instead.
+117,Drain energy and possibly damage the atmospheric scanners. \n \n Fly blind and possibly damage the life support systems instead.
+118,Drain energy and possibly damage the gravity scanners. \n \n Fly blind and possibly damage the construction system instead.
+119,Drain energy and possibly damage the gravity scanners. \n \n Fly blind and possibly damage the science databanks instead.
+120,Drain energy and possibly damage the gravity scanners. \n \n Fly blind and possibly damage the culture databanks instead.
+121,Drain energy and possibly damage the gravity scanners. \n \n Fly blind and possibly damage the atmospheric scanners instead.
+122,Drain energy and possibly damage the gravity scanners. \n \n Fly blind and possibly damage the gravity scanners instead.
+123,Drain energy and possibly damage the gravity scanners. \n \n Fly blind and possibly damage the temperature scanners instead.
+124,Drain energy and possibly damage the gravity scanners. \n \n Fly blind and possibly damage the water scanners instead.
+125,Drain energy and possibly damage the gravity scanners. \n \n Fly blind and possibly damage the resource scanners instead.
+126,Drain energy and possibly damage the gravity scanners. \n \n Fly blind and possibly damage the life support systems instead.
+127,Drain energy and possibly damage the temperature scanners. \n \n Fly blind and possibly damage the construction system instead.
+128,Drain energy and possibly damage the temperature scanners. \n \n Fly blind and possibly damage the science databanks instead.
+129,Drain energy and possibly damage the temperature scanners. \n \n Fly blind and possibly damage the culture databanks instead.
+130,Drain energy and possibly damage the temperature scanners. \n \n Fly blind and possibly damage the atmospheric scanners instead.
+131,Drain energy and possibly damage the temperature scanners. \n \n Fly blind and possibly damage the gravity scanners instead.
+132,Drain energy and possibly damage the temperature scanners. \n \n Fly blind and possibly damage the temperature scanners instead.
+133,Drain energy and possibly damage the temperature scanners. \n \n Fly blind and possibly damage the water scanners instead.
+134,Drain energy and possibly damage the temperature scanners. \n \n Fly blind and possibly damage the resource scanners instead.
+135,Drain energy and possibly damage the temperature scanners. \n \n Fly blind and possibly damage the life support systems instead.
+136,Drain energy and possibly damage the water scanners. \n \n Fly blind and possibly damage the construction system instead.
+137,Drain energy and possibly damage the water scanners. \n \n Fly blind and possibly damage the science databanks instead.
+138,Drain energy and possibly damage the water scanners. \n \n Fly blind and possibly damage the culture databanks instead.
+139,Drain energy and possibly damage the water scanners. \n \n Fly blind and possibly damage the atmospheric scanners instead.
+140,Drain energy and possibly damage the water scanners. \n \n Fly blind and possibly damage the gravity scanners instead.
+141,Drain energy and possibly damage the water scanners. \n \n Fly blind and possibly damage the temperature scanners instead.
+142,Drain energy and possibly damage the water scanners. \n \n Fly blind and possibly damage the water scanners instead.
+143,Drain energy and possibly damage the water scanners. \n \n Fly blind and possibly damage the resource scanners instead.
+144,Drain energy and possibly damage the water scanners. \n \n Fly blind and possibly damage the life support systems instead.
+145,Drain energy and possibly damage the resource scanners. \n \n Fly blind and possibly damage the construction system instead.
+146,Drain energy and possibly damage the resource scanners. \n \n Fly blind and possibly damage the science databanks instead.
+147,Drain energy and possibly damage the resource scanners. \n \n Fly blind and possibly damage the culture databanks instead.
+148,Drain energy and possibly damage the resource scanners. \n \n Fly blind and possibly damage the atmospheric scanners instead.
+149,Drain energy and possibly damage the resource scanners. \n \n Fly blind and possibly damage the gravity scanners instead.
+150,Drain energy and possibly damage the resource scanners. \n \n Fly blind and possibly damage the temperature scanners instead.
+151,Drain energy and possibly damage the resource scanners. \n \n Fly blind and possibly damage the water scanners instead.
+152,Drain energy and possibly damage the resource scanners. \n \n Fly blind and possibly damage the resource scanners instead.
+153,Drain energy and possibly damage the resource scanners. \n \n Fly blind and possibly damage the life support systems instead.
+154,Drain energy and possibly damage the life support systems. \n \n Fly blind and possibly damage the construction system instead.
+155,Drain energy and possibly damage the life support systems. \n \n Fly blind and possibly damage the science databanks instead.
+156,Drain energy and possibly damage the life support systems. \n \n Fly blind and possibly damage the culture databanks instead.
+157,Drain energy and possibly damage the life support systems. \n \n Fly blind and possibly damage the atmospheric scanners instead.
+158,Drain energy and possibly damage the life support systems. \n \n Fly blind and possibly damage the gravity scanners instead.
+159,Drain energy and possibly damage the life support systems. \n \n Fly blind and possibly damage the temperature scanners instead.
+160,Drain energy and possibly damage the life support systems. \n \n Fly blind and possibly damage the water scanners instead.
+161,Drain energy and possibly damage the life support systems. \n \n Fly blind and possibly damage the resource scanners instead.
+162,Drain energy and possibly damage the life support systems. \n \n Fly blind and possibly damage the life support systems instead.
