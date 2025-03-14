@@ -266,6 +266,13 @@ void clickAttempt() {
           planets.add( new Planet() );
           screenState = 2;
         }
+        else {
+          if ( planets.size() > 0) {
+            planets.remove(0);
+          }
+          planets.add( new Planet() );
+          screenState = 2;
+        }
       }
       
       //Click attempts for the 2nd choice option
@@ -337,6 +344,13 @@ void clickAttempt() {
         }
         if( answerOne.contains("gravity") ) {
           ship[0].scannerGravity = ship[0].scannerGravity - int(random(20) );
+          if ( planets.size() > 0) {
+            planets.remove(0);
+          }
+          planets.add( new Planet() );
+          screenState = 2;
+        }
+        else {
           if ( planets.size() > 0) {
             planets.remove(0);
           }
