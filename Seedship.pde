@@ -13,7 +13,9 @@ int journeyLength = 0;
 int screenState = 0;
 int timerTwoElapsed;
 int timerElapsed;
+boolean colonize;
 int probes = 10;
+int score;
 
 String problem;
 String answerOne, answerTwo;
@@ -104,10 +106,19 @@ void drawMeta() {
     GUI[0].monologue();
   }
   if( screenState == 2 ) {
-    GUI[0].planetHUD();
-    GUI[0].interactHUD();
     timerElapsed = millis() - timerStart;
     timerTwoElapsed = 0;
+    if( ( mouseX > 600 && mouseX < 900 ) &&
+        ( mouseY > 400 && mouseY < 500 ) ) {
+      varColorOne = color(255, 255, 0);
+      varSizeOne = 50;
+    }
+    else {
+      varColorOne = color(255);
+      varSizeOne = 48;
+    }
+    GUI[0].planetHUD();
+    GUI[0].interactHUD();
   }
   if( screenState == 3 ) {
     timerTwoElapsed = millis() - timerTwoStart;
@@ -126,6 +137,10 @@ void drawMeta() {
       varSizeTwo = 32;
     }
     GUI[0].dilemmas();
+  }
+  if( screenState == 4 ) {
+    ship[0].scoreCount();
+    GUI[0].endScreen();
   }
 }
 
@@ -172,6 +187,11 @@ void clickAttempt() {
         screenState = 3;
       }
     }
+    if ( dist( mouseX, mouseY, 450, 800) < 100) {
+      if ( timerElapsed >= timerLength ) {
+        colonize = true;
+      }
+    }
     if ( dist( mouseX, mouseY, 1050, 800) < 100) {
       if ( probes > 0 && planets.get(0).probed == false ) {
         probes --;
@@ -186,6 +206,13 @@ void clickAttempt() {
         return;
       }
     }
+    if( colonize == true ) {
+      if( ( mouseX > 600 && mouseX < 900 ) &&
+          ( mouseY > 400 && mouseY < 500 ) ) {
+        screenState = 4;
+        colonize = false;
+      }
+    }
   }
   
   //Click Attempts for the dilemma screen
@@ -195,7 +222,7 @@ void clickAttempt() {
       if( ( mouseX > 200 && mouseX < 1300 ) &&
           ( mouseY > 775 && mouseY < 825 ) ) {
         if( answerOne.contains("resource") ) {
-          ship[0].scannerResource = ship[0].scannerResource - int(random(20) );
+          ship[0].scannerResource = ship[0].scannerResource - int(random(40) );
           if ( planets.size() > 0) {
             planets.remove(0);
           }
@@ -203,7 +230,7 @@ void clickAttempt() {
           screenState = 2;
         }
         if( answerOne.contains("atmospheric") ) {
-          ship[0].scannerAtmosphere = ship[0].scannerAtmosphere - int(random(20) );
+          ship[0].scannerAtmosphere = ship[0].scannerAtmosphere - int(random(40) );
           if ( planets.size() > 0) {
             planets.remove(0);
           }
@@ -211,7 +238,7 @@ void clickAttempt() {
           screenState = 2;
         }
         if( answerOne.contains("water") ) {
-          ship[0].scannerWater = ship[0].scannerWater - int(random(20) );
+          ship[0].scannerWater = ship[0].scannerWater - int(random(40) );
           if ( planets.size() > 0) {
             planets.remove(0);
           }
@@ -219,7 +246,7 @@ void clickAttempt() {
           screenState = 2;
         }
         if( answerOne.contains("temperature") ) {
-          ship[0].scannerTemp = ship[0].scannerTemp - int(random(20) );
+          ship[0].scannerTemp = ship[0].scannerTemp - int(random(40) );
           if ( planets.size() > 0) {
             planets.remove(0);
           }
@@ -227,7 +254,7 @@ void clickAttempt() {
           screenState = 2;
         }
         if( answerOne.contains("science") ) {
-          ship[0].science = ship[0].science - int(random(20) );
+          ship[0].science = ship[0].science - int(random(40) );
           if ( planets.size() > 0) {
             planets.remove(0);
           }
@@ -235,7 +262,7 @@ void clickAttempt() {
           screenState = 2;
         }
         if( answerOne.contains("culture") ) {
-          ship[0].culture = ship[0].culture - int(random(20) );
+          ship[0].culture = ship[0].culture - int(random(40) );
           if ( planets.size() > 0) {
             planets.remove(0);
           }
@@ -243,7 +270,7 @@ void clickAttempt() {
           screenState = 2;
         }
         if( answerOne.contains("life support") ) {
-          ship[0].colonists = ship[0].colonists - int(random(50) );
+          ship[0].colonists = ship[0].colonists - int(random(100) );
           if ( planets.size() > 0) {
             planets.remove(0);
           }
@@ -251,7 +278,7 @@ void clickAttempt() {
           screenState = 2;
         }
         if( answerOne.contains("construction") ) {
-          ship[0].construct = ship[0].construct - int(random(20) );
+          ship[0].construct = ship[0].construct - int(random(40) );
           if ( planets.size() > 0) {
             planets.remove(0);
           }
@@ -259,7 +286,7 @@ void clickAttempt() {
           screenState = 2;
         }
         if( answerOne.contains("gravity") ) {
-          ship[0].scannerGravity = ship[0].scannerGravity - int(random(20) );
+          ship[0].scannerGravity = ship[0].scannerGravity - int(random(40) );
           if ( planets.size() > 0) {
             planets.remove(0);
           }
@@ -359,5 +386,87 @@ void clickAttempt() {
         }
       }
     }
+  }
+}
+
+void saveGame() {
+  try
+  {
+    //Use a PrintWriter to send your information to a chosen file
+    PrintWriter pw = createWriter( "save.txt" );
+
+    //Saves screenstate
+    pw.println( screenState );
+    //Saves state of current planet
+    pw.println( planets.get(0).atmosphere );
+    pw.println( planets.get(0).water );
+    pw.println( planets.get(0).gravity );
+    pw.println( planets.get(0).temp );
+    pw.println( planets.get(0).resource );
+    pw.println( planets.get(0).hasMoon );
+    pw.println( planets.get(0).hasStorms );
+    pw.println( planets.get(0).hasPlants );
+    pw.println( planets.get(0).hasAnimals );
+    pw.println( planets.get(0).hasCiv );
+    pw.println( planets.get(0).moonRich );
+    pw.println( planets.get(0).moonDie );
+    pw.println( planets.get(0).moonNorm );
+    pw.println( planets.get(0).plantsGood );
+    pw.println( planets.get(0).plantsBad );
+    pw.println( planets.get(0).plantsNeutral );
+    pw.println( planets.get(0).animalsGood );
+    pw.println( planets.get(0).animalsBad );
+    pw.println( planets.get(0).animalsNeutral );
+    pw.println( planets.get(0).civDead );
+    pw.println( planets.get(0).civTribe );
+    pw.println( planets.get(0).civStone );
+    pw.println( planets.get(0).civBronze );
+    pw.println( planets.get(0).civMedieval );
+    pw.println( planets.get(0).civIndustrial );
+    pw.println( planets.get(0).civModern );
+    pw.println( planets.get(0).civSpace );
+    pw.println( planets.get(0).probed );
+    //Saves state of ship
+    pw.println( ship[0].scannerAtmosphere );
+    pw.println( ship[0].scannerWater );
+    pw.println( ship[0].scannerGravity );
+    pw.println( ship[0].scannerTemp );
+    pw.println( ship[0].scannerResource );
+    pw.println( ship[0].upgradeAtmosphere );
+    pw.println( ship[0].upgradeWater );
+    pw.println( ship[0].upgradeGravity );
+    pw.println( ship[0].upgradeTemp );
+    pw.println( ship[0].upgradeResource );
+    pw.println( ship[0].construct );
+    pw.println( ship[0].colonists );
+    pw.println( ship[0].science );
+    pw.println( ship[0].culture );
+    pw.println( probes );
+
+    pw.flush(); //Writes the remaining data to the file
+    pw.close(); //Finishes the file
+  }
+  catch(Exception e)
+  {
+    println("SOMETHING WENT WRONG WHILE SAVING");
+  }
+}
+
+void loadGame()
+{
+
+  try
+  {
+    //Use the loadStrings() method to pull the lines of your save file into a String array
+    String [] data = loadStrings("save.txt"); // <- This will be the name of the save file
+    for( int i = 0; i < x; i++ ) {
+      playerX = Integer.parseInt(data[0]);
+      playerY = Integer.parseInt(data[1]);      //  If a file already exists, it will overwrite
+      coins   = Integer.parseInt(data[2]);
+    }
+  }
+  catch(Exception e)
+  {
+    println("SOMETHING WENT WRONG WHILE LOADING");
   }
 }

@@ -1,7 +1,6 @@
 class Planet {
   //Creates the necesary traits on planets
   int atmosphere, water, gravity, temp, resource;
-  float planetAvg;
   
   //Creates the unnecesary traits on planets
   /*
@@ -68,9 +67,6 @@ class Planet {
       water = int(max( random(100), max(random(100), random(100) ) ) );
     if( ship[0].upgradeTemp == 2 )
       temp = int(max( random(100), max(random(100), random(100) ) ) );
-    
-    //Creates planet average of essential scores to be used with score calucation
-    planetAvg = (atmosphere+resource+gravity+water+temp)/5;
     
     //Adds one to the running tally of what planets have been explored
     journeyLength ++;
