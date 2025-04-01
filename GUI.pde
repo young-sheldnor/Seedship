@@ -624,14 +624,14 @@ class GUI {
       text("\n Colonists were able to harverst most of what they needed from the plentiful crops, reminicint of those found on the Old Earth.", 750, list);
     }
     if( planets.get(0).plantsBad ) {
-      list += 40;
+      list += 80;
       ship[0].colonists =- int(random(200) );
       textSize(32);
       fill(255);
       text("\n Upon disembarking from the ship, the hostile plants began attacking the colonists. \n While they were eventually able to be cleared, several colonists had already died.", 750, list);
     }
     if( planets.get(0).plantsNeutral ) {
-      list += 40;
+      list += 80;
       textSize(32);
       fill(255);
       text("\n Whenever the colonists realized the native fauna served no perpose, \n they quickly dispatched them, clearing out land for settlement.", 750, list);
@@ -697,5 +697,15 @@ class GUI {
       fill(255);
       text("\n Colonists rely on primitive tools for survival because the science databanks were completely unoperable.", 750, list);
     }
+    push();
+      noFill();
+      strokeWeight(7);
+      stroke( varColorFour );
+      rect(750, 900, 300, 100);
+      noStroke();
+      textSize( varSizeFour );
+      fill( varColorFour );
+      text("Main Menu", 750, 915);
+    pop();
   }
 }

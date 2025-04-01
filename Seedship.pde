@@ -19,6 +19,7 @@ int score;
 
 String problem;
 String answerOne, answerTwo;
+String allData;
 
 PFont font;
 PImage seedship;
@@ -139,6 +140,15 @@ void drawMeta() {
     GUI[0].dilemmas();
   }
   if( screenState == 4 ) {
+    if( ( mouseX > 600 && mouseX < 900 ) &&
+        ( mouseY > 850 && mouseY < 950 ) ) {
+      varColorFour = color(255, 255, 0);
+      varSizeFour = 50;
+    }
+    else {
+      varColorFour = color(255);
+      varSizeFour = 48;
+    }
     ship[0].scoreCount();
     GUI[0].endScreen();
   }
@@ -159,7 +169,8 @@ void clickAttempt() {
     }
     if( ( mouseX > 600 && mouseX < 900 ) &&
         ( mouseY > 550 && mouseY < 650 ) ) {
-      screenState = 1;
+      screenState = 2;
+      loadGame();
     }
     if( ( mouseX > 600 && mouseX < 900 ) &&
         ( mouseY > 700 && mouseY < 800 ) ) {
@@ -300,6 +311,7 @@ void clickAttempt() {
           planets.add( new Planet() );
           screenState = 2;
         }
+        saveGame();
       }
       
       //Click attempts for the 2nd choice option
@@ -384,19 +396,26 @@ void clickAttempt() {
           planets.add( new Planet() );
           screenState = 2;
         }
+        saveGame();
       }
+    }
+  }
+  if( screenState == 4 ) {
+    if( ( mouseX > 600 && mouseX < 900 ) &&
+        ( mouseY > 850 && mouseY < 950 ) ) {
+      finalSave();
+      screenState = 0;
     }
   }
 }
 
+//Save feature for mid-game saving
 void saveGame() {
   try
   {
     //Use a PrintWriter to send your information to a chosen file
     PrintWriter pw = createWriter( "save.txt" );
 
-    //Saves screenstate
-    pw.println( screenState );
     //Saves state of current planet
     pw.println( planets.get(0).atmosphere );
     pw.println( planets.get(0).water );
@@ -452,21 +471,170 @@ void saveGame() {
   }
 }
 
+//Load feature for mid-game loading
 void loadGame()
 {
-
   try
   {
     //Use the loadStrings() method to pull the lines of your save file into a String array
     String [] data = loadStrings("save.txt"); // <- This will be the name of the save file
-    for( int i = 0; i < x; i++ ) {
-      playerX = Integer.parseInt(data[0]);
-      playerY = Integer.parseInt(data[1]);      //  If a file already exists, it will overwrite
-      coins   = Integer.parseInt(data[2]);
-    }
+    //Loads planetary information
+    planets.get(0).atmosphere = Integer.parseInt(data[0]);
+    planets.get(0).water = Integer.parseInt(data[1]);
+    planets.get(0).gravity = Integer.parseInt(data[2]);
+    planets.get(0).temp = Integer.parseInt(data[3]);
+    planets.get(0).resource = Integer.parseInt(data[4]);
+    planets.get(0).hasMoon = Boolean.parseBoolean(data[5]);
+    planets.get(0).hasStorms = Boolean.parseBoolean(data[6]);
+    planets.get(0).hasPlants = Boolean.parseBoolean(data[7]);
+    planets.get(0).hasAnimals = Boolean.parseBoolean(data[8]);
+    planets.get(0).hasCiv = Boolean.parseBoolean(data[9]);
+    planets.get(0).moonRich = Boolean.parseBoolean(data[10]);
+    planets.get(0).moonDie = Boolean.parseBoolean(data[11]);
+    planets.get(0).moonNorm = Boolean.parseBoolean(data[12]);
+    planets.get(0).plantsGood = Boolean.parseBoolean(data[13]);
+    planets.get(0).plantsBad = Boolean.parseBoolean(data[14]);
+    planets.get(0).plantsNeutral = Boolean.parseBoolean(data[15]);
+    planets.get(0).animalsGood = Boolean.parseBoolean(data[16]);
+    planets.get(0).animalsBad = Boolean.parseBoolean(data[17]);
+    planets.get(0).animalsNeutral = Boolean.parseBoolean(data[18]);
+    planets.get(0).civDead = Boolean.parseBoolean(data[19]);
+    planets.get(0).civTribe = Boolean.parseBoolean(data[20]);
+    planets.get(0).civStone = Boolean.parseBoolean(data[21]);
+    planets.get(0).civBronze = Boolean.parseBoolean(data[22]);
+    planets.get(0).civMedieval = Boolean.parseBoolean(data[23]);
+    planets.get(0).civIndustrial = Boolean.parseBoolean(data[24]);
+    planets.get(0).civModern = Boolean.parseBoolean(data[25]);
+    planets.get(0).civSpace = Boolean.parseBoolean(data[26]);
+    planets.get(0).probed = Boolean.parseBoolean(data[27]);
+    //Loads ship data
+    ship[0].scannerAtmosphere = Integer.parseInt(data[28]);
+    ship[0].scannerWater = Integer.parseInt(data[29]);
+    ship[0].scannerGravity = Integer.parseInt(data[30]);
+    ship[0].scannerTemp = Integer.parseInt(data[31]);
+    ship[0].scannerResource = Integer.parseInt(data[32]);
+    ship[0].upgradeAtmosphere = Integer.parseInt(data[33]);
+    ship[0].upgradeWater = Integer.parseInt(data[34]);
+    ship[0].upgradeGravity = Integer.parseInt(data[35]);
+    ship[0].upgradeTemp = Integer.parseInt(data[36]);
+    ship[0].upgradeResource = Integer.parseInt(data[37]);
+    ship[0].construct = Integer.parseInt(data[38]);
+    ship[0].colonists = Integer.parseInt(data[39]);
+    ship[0].science = Integer.parseInt(data[40]);
+    ship[0].culture = Integer.parseInt(data[41]);
+    probes = Integer.parseInt(data[42]);
   }
   catch(Exception e)
   {
     println("SOMETHING WENT WRONG WHILE LOADING");
   }
+}
+
+void finalSave() {
+   try {
+     PrintWriter pw = createWriter( "finalSaves.txt" );
+     
+    //Saves state of current planet
+    pw.println( planets.get(0).atmosphere );
+    pw.println( planets.get(0).water );
+    pw.println( planets.get(0).gravity );
+    pw.println( planets.get(0).temp );
+    pw.println( planets.get(0).resource );
+    pw.println( planets.get(0).hasMoon );
+    pw.println( planets.get(0).hasStorms );
+    pw.println( planets.get(0).hasPlants );
+    pw.println( planets.get(0).hasAnimals );
+    pw.println( planets.get(0).hasCiv );
+    pw.println( planets.get(0).moonRich );
+    pw.println( planets.get(0).moonDie );
+    pw.println( planets.get(0).moonNorm );
+    pw.println( planets.get(0).plantsGood );
+    pw.println( planets.get(0).plantsBad );
+    pw.println( planets.get(0).plantsNeutral );
+    pw.println( planets.get(0).animalsGood );
+    pw.println( planets.get(0).animalsBad );
+    pw.println( planets.get(0).animalsNeutral );
+    pw.println( planets.get(0).civDead );
+    pw.println( planets.get(0).civTribe );
+    pw.println( planets.get(0).civStone );
+    pw.println( planets.get(0).civBronze );
+    pw.println( planets.get(0).civMedieval );
+    pw.println( planets.get(0).civIndustrial );
+    pw.println( planets.get(0).civModern );
+    pw.println( planets.get(0).civSpace );
+    pw.println( planets.get(0).probed );
+    //Saves state of ship
+    pw.println( ship[0].scannerAtmosphere );
+    pw.println( ship[0].scannerWater );
+    pw.println( ship[0].scannerGravity );
+    pw.println( ship[0].scannerTemp );
+    pw.println( ship[0].scannerResource );
+    pw.println( ship[0].upgradeAtmosphere );
+    pw.println( ship[0].upgradeWater );
+    pw.println( ship[0].upgradeGravity );
+    pw.println( ship[0].upgradeTemp );
+    pw.println( ship[0].upgradeResource );
+    pw.println( ship[0].construct );
+    pw.println( ship[0].colonists );
+    pw.println( ship[0].science );
+    pw.println( ship[0].culture );
+    pw.println( probes );
+    pw.println();
+
+    pw.flush(); //Writes the remaining data to the file
+    pw.close(); //Finishes the file
+   }
+   catch( Exception E ) {
+     println("Failure saving exit save"); 
+   }
+}
+
+void finalLoad( int loadNum ) {
+  
+    String [] data = loadStrings("save.txt");
+  
+    planets.get(0).atmosphere = Integer.parseInt(data[0 + loadNum]);
+    planets.get(0).water = Integer.parseInt(data[1 + loadNum]);
+    planets.get(0).gravity = Integer.parseInt(data[2 + loadNum]);
+    planets.get(0).temp = Integer.parseInt(data[3 + loadNum]);
+    planets.get(0).resource = Integer.parseInt(data[4 + loadNum]);
+    planets.get(0).hasMoon = Boolean.parseBoolean(data[5 + loadNum]);
+    planets.get(0).hasStorms = Boolean.parseBoolean(data[6 + loadNum]);
+    planets.get(0).hasPlants = Boolean.parseBoolean(data[7 + loadNum]);
+    planets.get(0).hasAnimals = Boolean.parseBoolean(data[8 + loadNum]);
+    planets.get(0).hasCiv = Boolean.parseBoolean(data[9 + loadNum]);
+    planets.get(0).moonRich = Boolean.parseBoolean(data[10 + loadNum]);
+    planets.get(0).moonDie = Boolean.parseBoolean(data[11 + loadNum]);
+    planets.get(0).moonNorm = Boolean.parseBoolean(data[12 + loadNum]);
+    planets.get(0).plantsGood = Boolean.parseBoolean(data[13 + loadNum]);
+    planets.get(0).plantsBad = Boolean.parseBoolean(data[14 + loadNum]);
+    planets.get(0).plantsNeutral = Boolean.parseBoolean(data[15 + loadNum]);
+    planets.get(0).animalsGood = Boolean.parseBoolean(data[16 + loadNum]);
+    planets.get(0).animalsBad = Boolean.parseBoolean(data[17 + loadNum]);
+    planets.get(0).animalsNeutral = Boolean.parseBoolean(data[18 + loadNum]);
+    planets.get(0).civDead = Boolean.parseBoolean(data[19 + loadNum]);
+    planets.get(0).civTribe = Boolean.parseBoolean(data[20 + loadNum]);
+    planets.get(0).civStone = Boolean.parseBoolean(data[21 + loadNum]);
+    planets.get(0).civBronze = Boolean.parseBoolean(data[22 + loadNum]);
+    planets.get(0).civMedieval = Boolean.parseBoolean(data[23 + loadNum]);
+    planets.get(0).civIndustrial = Boolean.parseBoolean(data[24 + loadNum]);
+    planets.get(0).civModern = Boolean.parseBoolean(data[25 + loadNum]);
+    planets.get(0).civSpace = Boolean.parseBoolean(data[26 + loadNum]);
+    planets.get(0).probed = Boolean.parseBoolean(data[27 + loadNum]);
+    //Loads ship data
+    ship[0].scannerAtmosphere = Integer.parseInt(data[28 + loadNum]);
+    ship[0].scannerWater = Integer.parseInt(data[29 + loadNum]);
+    ship[0].scannerGravity = Integer.parseInt(data[30 + loadNum]);
+    ship[0].scannerTemp = Integer.parseInt(data[31 + loadNum]);
+    ship[0].scannerResource = Integer.parseInt(data[32 + loadNum]);
+    ship[0].upgradeAtmosphere = Integer.parseInt(data[33 + loadNum]);
+    ship[0].upgradeWater = Integer.parseInt(data[34 + loadNum]);
+    ship[0].upgradeGravity = Integer.parseInt(data[35 + loadNum]);
+    ship[0].upgradeTemp = Integer.parseInt(data[36 + loadNum]);
+    ship[0].upgradeResource = Integer.parseInt(data[37 + loadNum]);
+    ship[0].construct = Integer.parseInt(data[38 + loadNum]);
+    ship[0].colonists = Integer.parseInt(data[39 + loadNum]);
+    ship[0].science = Integer.parseInt(data[40 + loadNum]);
+    ship[0].culture = Integer.parseInt(data[41 + loadNum]);
+    probes = Integer.parseInt(data[42 + loadNum]);
 }

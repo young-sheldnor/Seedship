@@ -2,7 +2,7 @@ class Dilemma {
   String [] dilemmas;
   String [] choicesOne, choicesTwo;
   
-  //Loads the scenarios and choices folders.
+  //Loads the scenarios and choices text files
   void loadScenarios()
   {
     try {
